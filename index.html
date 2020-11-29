@@ -22,17 +22,38 @@
     </section>
     <section>
         <h3>Escribe aqui la pregunta actual del focus group</h3>
-        <input type="text" placeholder="Pregunta nueva">
-        <button>OK</button>
+        <input type="text" placeholder="Pregunta nueva" class="actual__inputQuestion">
+        <button class="actual__btnOk">OK</button>
     </section>
 
     <section class="historic">
-        <h2>Histórico</h2>
-        <article>
+        <h2 class="historic__title">Histórico</h2>
+        <article class="historic__list">
     
         </article>
     </section>
 
 
 </body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAJAb5xt0drUeCa2dBKMhHf3z8QMaHI2y4",
+    authDomain: "s10project.firebaseapp.com",
+    databaseURL: "https://s10project.firebaseio.com",
+    projectId: "s10project",
+    storageBucket: "s10project.appspot.com",
+    messagingSenderId: "830069995055",
+    appId: "1:830069995055:web:586213d3de0058aadbf8da",
+    measurementId: "G-RS1T4M3G43"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
 </html>
