@@ -17,13 +17,12 @@
             <div class="actual__score">
                 <p>Score: <strong class="actual__average"></strong></p>
             </div>
-            <button class="actual__delete">X</button>
         </article>
     </section>
     <section>
         <h3>Escribe aqui la pregunta actual del focus group</h3>
-        <input type="text" placeholder="Pregunta nueva" class="actual__inputQuestion">
-        <button class="actual__btnOk">OK</button>
+            <input required type="text" placeholder="Pregunta nueva" class="actual__inputQuestion">
+            <button class="actual__btnOk">OK</button>
     </section>
 
     <section class="historic">
@@ -55,5 +54,8 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
+
+<script src="script/index.js"></script>
+<script src="script/Question.js"></script>
 
 </html>
