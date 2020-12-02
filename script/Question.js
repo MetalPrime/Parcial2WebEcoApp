@@ -37,16 +37,11 @@ class Question {
                     
                 `;
 
+                component.appendChild(btnDelete);
 
         });
 
 
-            
-        
-        
-
-
-            component.appendChild(btnDelete);
 
         btnDelete.addEventListener('click', () => {
             if (this.question.isActual === "true") {

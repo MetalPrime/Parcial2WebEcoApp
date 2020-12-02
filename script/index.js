@@ -67,6 +67,11 @@ window.addEventListener('load', function () {
             } else {
                 listHistoric.appendChild(newQuestion.render());
             } 
+            if(actualQuestion.appendChild.length ==0){
+                actualQuestion.appendChild("<p>'No hay pregunta actual'</p>") ;
+            }
+            console.log(actualQuestion.appendChild.length)
+
         });
     });
 });
