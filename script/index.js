@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
                     database.ref('parcial2/questions/' + value.id).set({
                         id: value.id,
                         description: value.description,
-                        isActual: false,
+                        isActual: "false",
                     })
                 });
 
@@ -38,7 +38,7 @@ window.addEventListener('load', function () {
                 let question = {
                     id: questionsReference.key,
                     description: inputQuestion.value,
-                    isActual: true,
+                    isActual: "true",
                 }
     
                 questionsReference.set(question);
@@ -62,11 +62,11 @@ window.addEventListener('load', function () {
         elem.forEach(element => {
             value = element.val();
             newQuestion = new Question(value);
-            if (value.isActual) {
+            if (value.isActual === "true") {
                 actualQuestion.appendChild(newQuestion.render());
             } else {
                 listHistoric.appendChild(newQuestion.render());
-            }
+            } 
         });
     });
 });
