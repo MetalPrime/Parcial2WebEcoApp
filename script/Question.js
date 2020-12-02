@@ -48,7 +48,7 @@ class Question {
                 firebase.database().ref('parcial2/questions/' + this.question.id).set({
                     id: this.question.id,
                     description: this.question.description,
-                    isActual: false,
+                    isActual: "false",
                 })
             } else {
                 firebase.database().ref('parcial2/questions/' + this.question.id).remove();
