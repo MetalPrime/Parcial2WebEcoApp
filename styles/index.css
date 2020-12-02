@@ -56,8 +56,9 @@ body {
   top: 20px;
 }
 
-.actual__score {
+.question {
   padding: 1px 16px;
   border: 1px solid black;
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=index.css.map */

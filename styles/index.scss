@@ -31,7 +31,12 @@ body{
     }
 
     &__score{
-        padding: 1px 16px ;
-        border:  1px solid black;
+
     }
+}
+
+.question{
+    padding: 1px 16px ;
+    border:  1px solid black;
+    margin-bottom: 5px;
 }
