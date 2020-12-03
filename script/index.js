@@ -5,9 +5,10 @@ window.addEventListener('load', function () {
     const btnQuestion = document.querySelector('.actual__btnOk');
 
     const actualQuestion = document.querySelector('.actual__question');
-    const actualAverage = document.querySelector('.actual__average');
 
     const database = firebase.database();
+
+    const noQuestion = document.querySelector('.noQuestion');
 
     btnQuestion.addEventListener('click', function (event) {
 
@@ -65,13 +66,14 @@ window.addEventListener('load', function () {
             if (value.isActual === "true") {
                 actualQuestion.appendChild(newQuestion.render());
             } else {
+                
                 listHistoric.appendChild(newQuestion.render());
             } 
-            if(actualQuestion.appendChild.length ==0){
-                actualQuestion.appendChild("<p>'No hay pregunta actual'</p>") ;
-            }
-            console.log(actualQuestion.appendChild.length)
+            
+            
 
         });
+
+        
     });
 });

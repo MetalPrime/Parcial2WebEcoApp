@@ -2,8 +2,8 @@
 class Question {
     constructor(question) {
         this.question = question;
-        this.average;
-        this.questionAverage;
+        this.average = 0;
+        this.questionAverage = 0;
         
     }
 
@@ -52,6 +52,16 @@ class Question {
                 })
             } else {
                 firebase.database().ref('parcial2/questions/' + this.question.id).remove();
+                firebase.database().ref("parcial2/scores").on('value', (elem) => {
+                    elem.forEach(
+                        element =>{
+                            let value = element.val();
+                            if(value.quid === this.question.id){
+                                firebase.database().ref("parcial2/scores/" +value.id).set(null);
+                            }
+                        }
+                    );
+                });
 
             }
         });
